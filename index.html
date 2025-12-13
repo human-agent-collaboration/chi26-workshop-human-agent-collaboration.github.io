@@ -23,6 +23,19 @@
   <link href="assets/css/style.css" rel="stylesheet">
   
   <style>
+    /* Restrict main content containers to 80% of viewport width */
+    .container {
+      max-width: 80vw !important;
+    }
+
+    /* Optional: Add some minimum width to prevent too narrow on small screens */
+    @media (min-width: 576px) {
+      .container {
+        max-width: 60vw !important;
+        min-width: 320px; /* Prevent too narrow on very small screens */
+      }
+    }
+
     .schedule-table {
       width: 100%;
       border-collapse: collapse;
@@ -109,7 +122,7 @@
           <li><a class="nav-link scrollto" href="#cfp">Call for Papers</a></li>
           <!-- <li><a class="nav-link scrollto" href="#speakers">Speakers</a></li> -->
           <!-- <li><a class="nav-link scrollto" href="#accepted-paper">Accepted Papers</a></li> -->
-          <!-- <li><a class="nav-link scrollto" href="#schedule">Schedule</a></li> -->
+          <li><a class="nav-link scrollto" href="#schedule">Schedule</a></li>
           <!-- <li><a class="nav-link scrollto" href="#grant">Student Registration Grant</a></li> -->
           <li><a class="nav-link scrollto" href="#organizers">Organizers</a></li>
           <!-- <li><a class="nav-link scrollto" href="#sponsors">Sponsors</a></li> -->
@@ -252,16 +265,17 @@
         <ul class="fa-ul">
           <li><span class="fa-li"><i class="fa fa-check"></i></span><b>Submission Deadline</b>: <span style="color: red; font-weight: bold;">February 12, 2026, AoE</span></li>
           <!-- <li><span class="fa-li"><i class="fa fa-check"></i></span><b>Review Period</b>: September 5 - October 6, 2025</li> -->
-          <li><span class="fa-li"><i class="fa fa-check"></i></span><b>Notification Date</b>: <del>February 28, 2026</del> <span style="color: red; font-weight: bold;">October 8, 2025, AoE</span></li>
+          <!-- <li><span class="fa-li"><i class="fa fa-check"></i></span><b>Notification Date</b>: <del>February 28, 2026</del> <span style="color: red; font-weight: bold;">February 28, 2026, AoE</span></li> -->
+          <li><span class="fa-li"><i class="fa fa-check"></i></span><b>Notification Date</b>: <span style="color: red; font-weight: bold;">February 28, 2026, AoE</span></li>
           <li><span class="fa-li"><i class="fa fa-check"></i></span><b>Workshop Date</b>: TBD</li>
         </ul>
-        Deadlines are strict and will not be extended under any circumstances. All deadlines follow the <a href="https://time.is/Anywhere_on_Earth">Anywhere on Earth (AoE)</a> timezone.
+        All deadlines follow the <a href="https://time.is/Anywhere_on_Earth">Anywhere on Earth (AoE)</a> timezone.
         <br>
         <br>
         <h3>Submission Site</h3>
         <p>
-          Submissions will be managed via PCS. Papers will remain private during the review process. All authors must maintain up-to-date PCS profiles to ensure proper conflict-of-interest management and paper matching. 
-          <br>
+          Submissions will be managed via Openreview (link available soon). Papers will remain private during the review process. All authors must maintain up-to-date Openreview profiles to ensure proper conflict-of-interest management during the review process. 
+          <!-- <br> -->
           <!-- <br> -->
           <!-- Submit papers through the NeurIPS 2025 Workshop Submission Portal on OpenReview (<a href="https://openreview.net/group?id=NeurIPS.cc/2025/Workshop/MTI-LLM" target="_blank">Multi-Turn Interactions in LLMs Workshop Submission Portal</a>). -->
         </p>
@@ -296,12 +310,13 @@
         <h3>Submission Guidelines</h3>
         <h5>Formatting Requirements</h5>
 
-        Submissions must be in English and follow the <a href="assets/files/_NeurIPS_2025__Multi_Turn_Interactions_in_Large_Language_Models.zip">NeurIPS 2025 Workshop LaTeX Template</a>.  
+        Submissions must be in English and follow the <a href="https://chi2026.acm.org/chi-publication-formats/">ACM Master Article Submission Templates</a> (single column)</a>.  
         <br>
         We welcome 2–4 page submissions (ACM single-column format), including research articles, survey papers, and position papers that present original ideas, empirical studies, or design visions.
         <br>
         Submissions exceeding the page limit will be desk rejected.
-
+        <br>
+        <br>
         <h3>Review Process</h3>
         Submissions will undergo a lightweight, non-anonymous review, focusing on the quality of ideas and diversity of perspectives. Accepted papers will be published online on the workshop website.
 
@@ -326,7 +341,10 @@
       <div class="container" data-aos="fade-up">
           <div class="section-header">
               <h2>Speakers and Panelists</h2>
+              <p> To be confirmed soon.</p>
           </div>
+
+
           <!-- <div class="row">
               <div class="col-md-3 col-sm-4 col-6">
                   <div class="speaker" data-aos="fade-up" data-aos-delay="100" style="text-align: center;">
@@ -381,11 +399,11 @@
       </div>
   </section>
   
-  <section id="panelists" class="section-with-bg">
+  <!-- <section id="panelists" class="section-with-bg">
       <div class="container" data-aos="fade-up">
           <div class="section-header">
               <h2>Confirmed Panelists</h2>
-          </div>
+          </div> -->
           <!-- <div class="row">
               <div class="col-md-3 col-sm-4 col-6">
                   <div class="speaker" data-aos="fade-up" data-aos-delay="100" style="text-align: center;">
@@ -423,8 +441,8 @@
                   </div>
               </div>
           </div> -->
-      </div>
-  </section>
+      <!-- </div>
+  </section> -->
   
     <section id="schedule" style="padding-top: 20px;">
         <div class="container" data-aos="fade-up">
@@ -450,14 +468,24 @@
                   </div>
                 </div>
 
-                <div class="row schedule-item">
+                <!-- <div class="row schedule-item">
                   <div class="col-md-2"><time>1:35 - 2:05</time></div>
                   <div class="col-md-10">
                     <div class="speaker">
-                      <!-- <img src="assets/img/speakers/2.png" alt="Tatsu Hashimoto"> -->
+                      <img src="assets/img/speakers/2.png" alt="Tatsu Hashimoto">
                     </div>
                     <h4>Keynote</h4>
                     <h4>TBD</h4>
+                  </div>
+                </div> -->
+
+                <div class="row schedule-item">
+                  <div class="col-md-2"><time>1:35 - 2:05</time></div>
+                  <div class="col-md-10">
+                    <h4>Keynote</h4>
+                    <!-- <b>On Prompt-Driven Safeguarding for Large Language Models</b> -->
+                    <!-- <br> -->
+                    Speaker to be confirmed soon.
                   </div>
                 </div>
 
@@ -1206,21 +1234,17 @@
     </section> -->
 
     <!-- Partners -->
-    <!-- <section id="partners" class="section-with-bg">
+    <section id="faq" class="section-with-bg">
       <div class="container" data-aos="fade-up">
         <div class="section-header">
-          <h2>Partners</h2>
+          <h2>FAQ</h2>
+          <p>To be added soon.</p>
         </div>
-        <div class="row justify-content-center">
-          <div class="col-md-4 col-sm-6 col-8">
-            <div class="speaker" data-aos="fade-up" data-aos-delay="100" style="text-align: center;">
-              <img src="assets/img/sponsors/prime.jpeg" alt="Prime Intellect" class="img-fluid">
-              <p style="font-size: 1.2em; font-weight: 500; margin-top: 10px;">Prime Intellect</p>
-            </div>
-          </div>
-        </div>
+        
+
+
       </div>
-    </section> -->
+    </section>
     
     <br>
     <br>
